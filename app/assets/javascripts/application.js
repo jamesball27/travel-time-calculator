@@ -29,7 +29,7 @@ const appendNewAutocomplete = (e) => {
 
   const input = createNewInput(inputNumber);
   const label = createNewLabel(input, inputNumber);
-  const hiddenInput = createNewHiddenInput(input);
+  const hiddenInput = createNewHiddenInput(input, inputNumber);
 
   form.insertBefore(label, submit);
   form.insertBefore(input, submit);
@@ -41,18 +41,18 @@ const createNewInput = inputNumber => {
   const input = document.createElement('input');
   input.id = `destination-${ inputNumber}`;
   input.className = 'autocomplete';
-  input.name = `travel_times[addresses][${input.id}]`;
+  input.name = `travel_times[destinations][${inputNumber - 1}][address]`;
   initializeAutocomplete(input);
   return input;
 };
 
 // need to add a hidden input to the form to send the coords to backend
 // without changing the displayed address
-const createNewHiddenInput = input => {
+const createNewHiddenInput = (input, inputNumber) => {
   const hiddenInput = document.createElement('input');
   hiddenInput.id = `coords-${input.id}`;
   hiddenInput.type = 'hidden';
-  hiddenInput.name = `travel_times[coords][${input.id}]`
+  hiddenInput.name = `travel_times[destinations][${inputNumber - 1}][coords]`
   return hiddenInput;
 };
 
