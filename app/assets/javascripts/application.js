@@ -41,16 +41,18 @@ const createNewInput = inputNumber => {
   const input = document.createElement('input');
   input.id = `destination-${ inputNumber}`;
   input.className = 'autocomplete';
-  input.name = `addresses[${input.id}]`;
+  input.name = `travel_times[addresses][${input.id}]`;
   initializeAutocomplete(input);
   return input;
 };
 
+// need to add a hidden input to the form to send the coords to backend
+// without changing the displayed address
 const createNewHiddenInput = input => {
   const hiddenInput = document.createElement('input');
   hiddenInput.id = `coords-${input.id}`;
   hiddenInput.type = 'hidden';
-  hiddenInput.name = `coords[${input.id}]`
+  hiddenInput.name = `travel_times[coords][${input.id}]`
   return hiddenInput;
 };
 
@@ -71,8 +73,8 @@ const initializeAutocomplete = input => {
     bounds: londonBounds,
     types: ['address']
   };
-  const autocomplete = new google.maps.places.Autocomplete(input, options);
 
+  const autocomplete = new google.maps.places.Autocomplete(input, options);
   autocomplete.addListener('place_changed', updateCoords(autocomplete, input));
 };
 
