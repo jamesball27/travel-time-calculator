@@ -4,7 +4,6 @@ class TravelTimesController < ApplicationController
   end
 
   def create
-    debugger
     @travel_times = TravelTime.all(travel_time_params)
     render :show
   end
@@ -12,7 +11,8 @@ class TravelTimesController < ApplicationController
   private
 
   def travel_time_params
-    params.require(:travel_times).permit(:departure_time, destinations:  [ :address, :coords ] )
+    params.require(:travel_times)
+      .permit(:departure_time, destinations: [:address, :coords])
   end
-  
+
 end

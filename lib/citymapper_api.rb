@@ -1,13 +1,13 @@
 
 class CitymapperApi
 
-  include 'HTTParty'
+  include HTTParty
 
   def self.get_travel_time(start_coord, end_coord, time)
-    url = "https://developer.citymapper.com"
-    
+    url = "https://developer.citymapper.com/api/1/traveltime/"
+
     params = {
-      startcood: start_coord,
+      startcoord: start_coord,
       endcoord: end_coord,
       time: time,
       time_type: "arrival",
