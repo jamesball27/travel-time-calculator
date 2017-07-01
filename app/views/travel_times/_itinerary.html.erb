@@ -1,0 +1,12 @@
+<h2>Itinerary</h2>
+
+<ul>
+  <% @travel_times.each_with_index do |travel_time, i|  %>
+    <li>
+      Destination <%= i + 1 %>:
+      <span>Address: <%= travel_time.address %></span>
+      <span>Arrival time: <%= travel_time.arrival_time %></span>
+      <span>Travel time: <%= travel_time.travel_time %> minutes</span>
+    </li>
+  <% end %>
+</ul>

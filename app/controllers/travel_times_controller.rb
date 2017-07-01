@@ -1,11 +1,12 @@
 class TravelTimesController < ApplicationController
 
-  def show
+  def new
+    @travel_times = nil
   end
 
   def create
-    @travel_times = TravelTime.all(travel_time_params)
-    render :show
+    @travel_times = TravelTime.parse(travel_time_params)
+    render :new
   end
 
   private

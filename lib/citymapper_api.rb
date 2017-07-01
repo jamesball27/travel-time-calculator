@@ -15,6 +15,7 @@ class CitymapperApi
     }
 
     response = JSON.parse get(url, query: params).to_s
+    debugger
     response["travel_time_minutes"]
   end
 

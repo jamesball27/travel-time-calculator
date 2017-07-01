@@ -9,7 +9,7 @@
   <label for="starting-location">Starting Location: Rentify, Barbican, London</label>
 
   </br>
-  
+
   <label for="datetime">Date/Time of Departure:</label>
   <input
     id="datetime"
@@ -27,4 +27,6 @@
   <input id="submit" type="submit" value="Get travel times">
 </form>
 
-<%= render partial: "travel_times" %>
+<% if @travel_times %>
+  <%= render partial: "itinerary" %>
+<% end %>
