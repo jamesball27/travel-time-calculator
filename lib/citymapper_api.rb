@@ -1,4 +1,3 @@
-
 class CitymapperApi
 
   include HTTParty

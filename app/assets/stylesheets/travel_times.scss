@@ -1,3 +1,63 @@
 // Place all the styles related to the TravelTimes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.header {
+  font-size: 48px;
+  color: #F1F1F1;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.travel-times-form {
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #F1F1F1;
+
+  label {
+    font-size: 14px;
+    margin: 10px;
+  }
+
+  input {
+    background: #F1F1F1;
+    padding: 5px;
+  }
+}
+
+.autocomplete {
+  width: 50%;
+  margin: 10px;
+  padding: 10px;
+}
+
+.button {
+  border: none;
+  font-size: 16px;
+  border-radius: 10px;
+  padding: 15px;
+  cursor: pointer;
+  transition: transform .25s;
+  color: #F1F1F1;
+  margin: 10px;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.buttons {
+  display: flex;
+}
+
+#add-destination {
+  background: #4C4C9D;
+
+}
+
+#submit {
+  background: #F7996E;
+  padding: 15px;
+}

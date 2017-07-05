@@ -5,16 +5,15 @@ const appendNewAutocomplete = (e) => {
   const inputs = document.querySelectorAll('.autocomplete');
   const inputNumber = inputs.length + 1;
   const form = document.getElementById('form');
-  const submit = document.getElementById('submit');
+  const buttons = document.querySelector('.buttons');
 
   const input = createNewInput(inputNumber);
   const label = createNewLabel(input, inputNumber);
   const hiddenInput = createNewHiddenInput(input, inputNumber);
 
-  form.insertBefore(label, submit);
-  form.insertBefore(input, submit);
-  form.insertBefore(hiddenInput, submit);
-  form.insertBefore(document.createElement('br'), submit);
+  form.insertBefore(label, buttons);
+  form.insertBefore(input, buttons);
+  form.insertBefore(hiddenInput, buttons);
 };
 
 const createNewInput = inputNumber => {

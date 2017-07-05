@@ -1,4 +1,4 @@
-<form class="" action="<%= travel_times_url %>" method="post" id="form">
+<form class="travel-times-form" action="<%= travel_times_url %>" method="post" id="form">
 
   <input
     type="hidden"
@@ -6,9 +6,7 @@
     value="<%= form_authenticity_token %>"
   >
 
-  <label for="starting-location">Starting Location: Rentify, Barbican, London</label>
-
-  </br>
+  <span>Starting Location: Rentify, Barbican, London</span>
 
   <label for="datetime">Date/Time of Departure:</label>
   <input
@@ -18,13 +16,10 @@
     value="<%= Time.now.strftime("%Y-%m-%dT%H:%M") %>"
   >
 
-  </br>
-
-  <button id="add-destination">Add Destination</button>
-
-  </br>
-
-  <input id="submit" type="submit" value="Get travel times">
+  <div class="buttons">
+    <button id="add-destination" class="button">Add Destination</button>
+    <input id="submit" class="button" type="submit" value="Get travel times">
+  </div>
 </form>
 
 <script>

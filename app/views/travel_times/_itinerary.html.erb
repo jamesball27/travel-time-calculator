@@ -1,12 +1,22 @@
-<h2>Itinerary</h2>
+<% if @travel_times.nil? %>
+  <h2 class="header sub-header">An error occured, please try again.</h2>
+<% else %>
+  <h2 class="header sub-header">Itinerary</h2>
+  <table class="itinerary">
+    <tr>
+      <th>Destination</th>
+      <th>Address</th>
+      <th>Travel Time</th>
+      <th>Arrival Time</th>
+    </tr>
 
-<ul>
-  <% @travel_times.each_with_index do |travel_time, i|  %>
-    <li>
-      Destination <%= i + 1 %>:
-      <span>Address: <%= travel_time.address %></span>
-      <span>Arrival time: <%= travel_time.arrival_time %></span>
-      <span>Travel time: <%= travel_time.travel_time %> minutes</span>
-    </li>
-  <% end %>
-</ul>
+    <% @travel_times.each_with_index do |travel_time, i|  %>
+      <tr>
+        <td><%= i + 1 %></td>
+        <td><%= travel_time.address %></td>
+        <td><%= travel_time.travel_time %> minutes</td>
+        <td><%= travel_time.arrival_time %></td>
+      </tr>
+    <% end %>
+  </table>
+<% end %>

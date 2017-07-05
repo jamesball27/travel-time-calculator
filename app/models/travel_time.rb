@@ -11,6 +11,7 @@ class TravelTime
     destinations.each do |destination|
       end_coords = destination["coords"]
       travel_time = CitymapperApi.get_travel_time(start_coords, end_coords, time)
+      return nil if travel_time.nil?
 
       start_coords = end_coords
       time = (Time.parse(time) + (travel_time * 60)).strftime("%Y-%m-%dT%H:%M")
