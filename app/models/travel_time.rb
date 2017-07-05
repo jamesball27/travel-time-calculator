@@ -1,4 +1,3 @@
-
 class TravelTime
 
   def self.parse(travel_time_params)
