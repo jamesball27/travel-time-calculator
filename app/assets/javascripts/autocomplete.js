@@ -1,5 +1,4 @@
-
-const appendNewAutocomplete = (e) => {
+const appendNewAutocomplete = e => {
   e.preventDefault();
 
   const inputs = document.querySelectorAll('.autocomplete');
@@ -18,7 +17,7 @@ const appendNewAutocomplete = (e) => {
 
 const createNewInput = inputNumber => {
   const input = document.createElement('input');
-  input.id = `destination-${ inputNumber}`;
+  input.id = `destination-${inputNumber}`;
   input.className = 'autocomplete';
   input.name = `travel_times[destinations][${inputNumber - 1}][address]`;
   initializeAutocomplete(input);

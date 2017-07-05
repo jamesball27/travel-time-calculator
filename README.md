@@ -2,7 +2,7 @@
 This is a simple app that utilizes Citymapper's travel time API to calculate the travel time between destinations using public transport.
 
 ## Setup
-Clone this repository and navigate to its root directory. From your command line, run `bundle exec rails s` to start a local Rails server. Then navigate to `localhost:3000/` in your browser to see the app in action.
+Clone this repository and navigate to its root directory. From your command line, run `bundle install` and then `bundle exec rails s` to start a local Rails server. Then navigate to `localhost:3000/` in your browser to see the app in action.
 
 This app depends on two third-party APIs: [Google Maps Places Autocomplete](https://developers.google.com/maps/documentation/javascript/) and [Citymapper](https://citymapper.3scale.net/). To run this app, you will need an API key for both of these services (available for free at the links provided). Once you have acquired your private keys, you will need to replace the following variables in the source code with your keys (as strings):
 

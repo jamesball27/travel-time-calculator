@@ -3,7 +3,7 @@ class TravelTime
   def self.parse(travel_time_params)
     travel_times = []
 
-    start_coords = '51.520032,-0.0989399'
+    start_coords = '51.520032,-0.0989399' # Rentify, London
     time = travel_time_params["departure_time"]
     destinations = travel_time_params["destinations"].values
 
@@ -14,7 +14,7 @@ class TravelTime
 
       start_coords = end_coords
       time = (Time.parse(time) + (travel_time * 60)).strftime("%Y-%m-%dT%H:%M")
-
+      
       params = {
         address: destination["address"],
         arrival_time: time,
