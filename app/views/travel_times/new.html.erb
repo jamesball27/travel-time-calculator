@@ -27,6 +27,9 @@
   <input id="submit" type="submit" value="Get travel times">
 </form>
 
-<% if @travel_times %>
-  <%= render partial: "itinerary" %>
-<% end %>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const addDestination = document.getElementById('add-destination');
+    addDestination.addEventListener('click', appendNewAutocomplete);
+  });
+</script>

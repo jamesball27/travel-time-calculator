@@ -9,7 +9,6 @@ class TravelTime
     destinations = travel_time_params["destinations"].values
 
     destinations.each do |destination|
-      debugger
       end_coords = destination["coords"]
       travel_time = CitymapperApi.get_travel_time(start_coords, end_coords, time)
 
