@@ -1,0 +1,73 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://developer.citymapper.com/api/1/traveltime/?endcoord=51.5161118,-0.13303289999998924&key=8b2f5ae6c340c64b33f3c9637b896eb1&startcoord=51.520032,-0.0989399&time=2017-07-12T10:24&time_type=arrival
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf8
+      Date:
+      - Wed, 12 Jul 2017 14:52:40 GMT
+      Server:
+      - openresty
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '27'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"travel_time_minutes": 20}'
+    http_version: 
+  recorded_at: Wed, 12 Jul 2017 14:52:38 GMT
+- request:
+    method: get
+    uri: https://developer.citymapper.com/api/1/traveltime/?endcoord=51.4972074,-0.1385334999999941&key=8b2f5ae6c340c64b33f3c9637b896eb1&startcoord=51.5161118,-0.13303289999998924&time=2017-07-12T10:44&time_type=arrival
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf8
+      Date:
+      - Wed, 12 Jul 2017 14:52:41 GMT
+      Server:
+      - openresty
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '27'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"travel_time_minutes": 20}'
+    http_version: 
+  recorded_at: Wed, 12 Jul 2017 14:52:38 GMT
+recorded_with: VCR 3.0.3
